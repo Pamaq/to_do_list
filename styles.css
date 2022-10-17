@@ -167,7 +167,7 @@ h1 {
 	width: 100%;
 	padding: 10px 20px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 50px;
 	color: var(--light-dark);
 	background-color: var(--light);
 }
