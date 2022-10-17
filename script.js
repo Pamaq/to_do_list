@@ -32,6 +32,7 @@ const prepareDOMEvents = () => {
 	ulList.addEventListener("click", checkClick);
 	popupCloseBtn.addEventListener("click", closePopup);
 	popupAddBtn.addEventListener("click", changeTodoText);
+	todoInput.addEventListener("keyup", enterKeyCheck);
 }; //nasluchiwanie
 
 const addNewTask = () => {
@@ -102,5 +103,9 @@ const deleteToDo = (e) => {
 		errorInfo.textContent = "Brak zadan na liscie";
 	}
 };
-
+const enterKeyCheck = (e) => {
+	if (e.key === "Enter") {
+		addNewTask();
+	}
+};
 document.addEventListener("DOMContentLoaded", main); //event odpowiadajacy za wczytanie sie calej strony przed uruchomieniem skryptow
